@@ -1,0 +1,22 @@
+<h3 class="p-3">Population of the United States of America</h3>
+<div class=".container-xl">
+<table class = "table  table-hover">
+  <thead>
+  <th>Year</th>
+  <th>Nation</th>
+  <th>Population</th>
+  </thead>
+
+  <tbody>
+  <tr *ngFor = "let current of service.data">
+
+    <td>{{current.Year}}</td>
+    <td>{{current.Nation}}</td>
+    <td>{{current.Population}}</td>
+    <td><button routerLink="/edit" class="btn btn-primary" (click)="service.transporter(current)">Edit</button></td>
+    <td><button class="btn btn-primary" (click)="delete(current)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>

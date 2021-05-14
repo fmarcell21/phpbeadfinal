@@ -1,0 +1,23 @@
+
+<div class="container p-3 my-5 border">
+  <form>
+    <div class="row">
+      <div class="col-sm">
+        <label for= "YearInput">Year: </label>
+        <input type="text" name = "YearInput" id = "YearInput" placeholder="Enter the Year" [(ngModel)]="data.Year" >
+      </div>
+
+      <div class="col-sm">
+        <label for = "NationInput">Nation:     </label>
+        <input type="text" name="NationInput" id = "NationInput" placeholder="Enter the Nation" [(ngModel)]="data.Nation">
+      </div>
+
+      <div class="col-sm">
+        <label for = "PopInput">Population: </label>
+        <input type = "text" name="PopInput" id = "PopInput" placeholder="Enter the Population" [(ngModel)]="data.Population">
+      </div>
+
+      <button class="btn btn-outline-success" routerLink="/list" type = "submit" (click) = "save()" >Add new entry</button>
+      </div>
+  </form>
+</div>
